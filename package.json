@@ -1,0 +1,32 @@
+{
+  "name": "portfolio_front_end_fine_art_photography",
+  "version": "1.0.0",
+  "description": "My fine art photography & front end development portfolio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "front-end",
+    "udacity",
+    "portfolio",
+    "photog"
+  ],
+  "author": "Grey Grissom",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "gulp": "^3.9.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-header": "^1.8.8",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-order": "^1.1.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-ruby-sass": "^2.1.1",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.11"
+  }
+}
