@@ -26,9 +26,9 @@ gulp.task('compass', function(){
                     return this.emit("end");
 			  }
 			 })).pipe(compass({
-       	            css : './',
+       	            css : 'dev/css',
                    sass : 'dev/sass',
-	          images: 'images',
+	          images: 'dev/unoptimized_photography',
                   javascript: 'dev/js',
                   comments: false,
                  style  : 'compressed'
@@ -36,11 +36,11 @@ gulp.task('compass', function(){
 		});
 
 gulp.task('js', function() {
-	return gulp.src(paths.js).pipe(concat("all.js")).pipe(uglify()).pipe(gulp.dest("js")).pipe(notify("gulp: js complete :) ."));
+	return gulp.src(paths.js).pipe(concat("the_feel.js")).pipe(uglify()).pipe(gulp.dest("dist/js")).pipe(notify("gulp: js complete :) ."));
 });
 
 gulp.task("css", function() {
-	return gulp.src(paths.css).pipe(concat("main.css")).pipe(gulp.dest("dev/css")).pipe(livereload()).pipe(notify("gulp: css has completed :) "));
+	return gulp.src(paths.css).pipe(concat("the_look.css")).pipe(gulp.dest("dist/css")).pipe(livereload()).pipe(notify("gulp: css has completed :) "));
 });
 
 gulp.task("html", function() {
