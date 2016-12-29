@@ -11,7 +11,7 @@ var gulp       = require('gulp'),
     mario      = require('gulp-plumber');
 // -----------------------------------------------------------------
 var paths      =  {
-		     js : ['dev/js/vendor/*.js', 'dev/js/proprietary/*.js'],
+		     js : ['dev/js/*.js'],
 		   sass : ['dev/sass/*.sass'],
     		    css : ['dev/css/*.css'],
     		    img : 'dev/unoptimized_photography/*',
@@ -36,7 +36,22 @@ gulp.task('compass', function(){
 		});
 
 gulp.task('js', function() {
-	return gulp.src(paths.js).pipe(concat("the_feel.js")).pipe(uglify()).pipe(gulp.dest("dist/js")).pipe(notify("gulp: js complete :) ."));
+	return gulp.src(paths.js).pipe(order([
+                                       "core.js",
+                                       "background.js",
+                                       "owl.carousel.js",
+                                       "jquery.easing.js",
+                                       "jquery.magnific-popup.js",
+                                       "wow.js",
+                                       "contact_me.js",
+                                       "jqBootstrapValidation.js",
+                                       "mediaquery.js",
+                                       "build.js"
+                                       ]))
+    .pipe(concat("the_feel.js"))
+    .pipe(uglify())
+    .pipe(gulp.dest("dist/js"))
+    .pipe(notify("gulp 'js' just finished: \n  a. created dist/js/all.js \n b. put js files in corrct order \n c. uglified (aka minified) the file \n tip: make sure wiredep is connected! \n\n\n gulp: js complete :) ."));
 });
 
 gulp.task("css", function() {
