@@ -42,15 +42,7 @@ $(document).ready(function() {
     });
 
     // Owl Carousel Settings
-    $(".about-carousel").owlCarousel({
-        items: 3,
-        navigation: true,
-        pagination: false,
-        navigationText: [
-            "<i class='fa fa-angle-left'></i>",
-            "<i class='fa fa-angle-right'></i>"
-        ],
-    });
+
 
     $(".portfolio-carousel").owlCarousel({
         singleItem: true,
@@ -66,17 +58,7 @@ $(document).ready(function() {
         transitionStyle: "fadeUp"
     });
 
-    $(".testimonials-carousel, .mockup-carousel").owlCarousel({
-        singleItem: true,
-        navigation: true,
-        pagination: true,
-        autoHeight: true,
-        navigationText: [
-            "<i class='fa fa-angle-left'></i>",
-            "<i class='fa fa-angle-right'></i>"
-        ],
-        transitionStyle: "backSlide"
-    });
+
 
     $(".portfolio-gallery").owlCarousel({
         items: 3,
@@ -93,20 +75,8 @@ $(document).ready(function() {
         }
     });
 
-    $('.mix').magnificPopup({
-        type: 'image',
-        image: {
-            titleSrc: 'title'
-        }
-    });
 
-    // Formstone Background - Video Background Settings
-    $("header.video").background({
-        source: {
-            poster: "img/agency/backgrounds/bg-mobile-fallback.jpg",
-            mp4: "mp4/camera.mp4"
-        }
-    });
+
 
     // Scrollspy: Highlights the navigation menu items while scrolling.
     $('body').scrollspy({
@@ -114,54 +84,6 @@ $(document).ready(function() {
         offset: 51
     })
 
-    // Portfolio Filtering Scripts & Hover Effect
-    var filterList = {
-        init: function() {
 
-            // MixItUp plugin
-            $('#portfoliolist').mixItUp();
-
-        },
-
-    };
-
-    filterList.init();
 
 })(jQuery); // End of use strict
-
-
-
-var cbpAnimatedHeader = (function() {
-
-	var docElem = document.documentElement,
-		header = document.querySelector( '.cbp-af-header' ),
-		didScroll = false,
-		changeHeaderOn = 300;
-
-	function init() {
-		window.addEventListener( 'scroll', function( event ) {
-			if( !didScroll ) {
-				didScroll = true;
-				setTimeout( scrollPage, 250 );
-			}
-		}, false );
-	}
-
-	function scrollPage() {
-		var sy = scrollY();
-		if ( sy >= changeHeaderOn ) {
-			classie.add( header, 'cbp-af-header-shrink' );
-		}
-		else {
-			classie.remove( header, 'cbp-af-header-shrink' );
-		}
-		didScroll = false;
-	}
-
-	function scrollY() {
-		return window.pageYOffset || docElem.scrollTop;
-	}
-
-	init();
-
-})();

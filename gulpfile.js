@@ -3,12 +3,19 @@ var gulp       = require('gulp'),
     livereload = require('gulp-livereload'),
     header     = require('gulp-header'),
     concat     = require('gulp-concat'),
+    htmlV      = require('gulp-html-validator'),
+    md         = require('gulp-html2md'),
+    imagemin   = require('gulp-imagemin'),
+    jsV        = require('gulp-jsvalidate'),
     mCSS       = require('gulp-minify-css'),
     notify     = require('gulp-notify'),
     uglify     = require('gulp-uglify'),
     order      = require('gulp-order'),
     compass    = require('gulp-compass'),
+    clean      = require('gulp-cleanhtml'),
     mario      = require('gulp-plumber');
+
+
 // -----------------------------------------------------------------
 var paths      =  {
 		     js : ['dev/js/*.js'],
@@ -38,6 +45,8 @@ gulp.task('compass', function(){
 gulp.task('js', function() {
 	return gulp.src(paths.js).pipe(order([
                                        "core.js",
+                                       "classie.js",
+                                       "cbpAnimatedHeader.js",
                                        "background.js",
                                        "owl.carousel.js",
                                        "jquery.easing.js",
