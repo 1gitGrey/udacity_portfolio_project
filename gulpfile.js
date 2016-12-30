@@ -54,13 +54,13 @@ gulp.task('js', function() {
                                        "wow.js",
                                        "contact_me.js",
                                        "jqBootstrapValidation.js",
-                                       "mediaquery.js",
                                        "build.js"
                                        ]))
     .pipe(concat("the_feel.js"))
+    .pipe(jsV())
     .pipe(uglify())
     .pipe(gulp.dest("dist/js"))
-    .pipe(notify("gulp 'js' just finished: \n  a. created dist/js/all.js \n b. put js files in corrct order \n c. uglified (aka minified) the file \n tip: make sure wiredep is connected! \n\n\n gulp: js complete :) ."));
+    .pipe(notify("gulp: js complete :) ."));
 });
 
 gulp.task("css", function() {
@@ -68,13 +68,10 @@ gulp.task("css", function() {
 });
 
 gulp.task("html", function() {
-//	var reload_script;
-  //	reload_script = void 0;
- /*		reload_script = "<script>document.write('<script src=\'http://'
-                               + (location.host || 'localhost').split(':')[0] +
-					 ':35729/livereload.js?snipver=1\"></' +
-						 'script>')</script>";
-    return gulp.src('./*.html').pipe(header(reload_script, {})).pipe(gulp.dest("./")); */
+  gulp.src('index.html')
+      .pipe(htmlV())
+      .pipe(gulp.dest('dist'));
+
 });
 
 //-------------------------------------------------------------------------------------------------------------
@@ -100,7 +97,7 @@ gulp.task('watch', function() {
 	gulp.watch(paths.js,   ["release"]);
         server = livereload();
 
-	return gulp.watch(['css/*.css', 'js/*.js']).on("change", function(file) {
+	return gulp.watch(['dist/css/*.css', 'dev/js/*.js', 'dev/sass/*.scss', 'dev/css/*.css', 'dist/js/*.js']).on("change", function(file) {
 		return server.changed(file.path);
 	});
 });
