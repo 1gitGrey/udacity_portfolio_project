@@ -19,7 +19,7 @@ var gulp       = require('gulp'),
 // -----------------------------------------------------------------
 var paths      =  {
 		     js : ['dev/js/*.js'],
-		   sass : ['dev/sass/*.sass'],
+		   sass : ['dev/sass/*.scss'],
     		    css : ['dev/css/*.css'],
     		    img : 'dev/unoptimized_photography/*',
   		   html : ['*.html']

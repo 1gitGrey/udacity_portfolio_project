@@ -13563,12 +13563,7 @@ img.mfp-img {
     padding-left: 6px;
     padding-right: 6px; } }
 
-/*!
- * Vitality v1.4.0 (http://themes.startbootstrap.com/vitality-v1.4.0)
- * Copyright 2013-2016 Start Bootstrap Themes
- * To use this theme you must have a license purchased at WrapBootstrap
-(https://wrapbootstrap.com)
- */
+
 html,
 body {
   height: 100%;
@@ -13601,7 +13596,7 @@ input.form-control {
   border-radius: 0 !important;
 }
 input.form-control:focus {
-  border-color: #EF4035;
+  border-color: #33ddac;
   box-shadow: none;
 }
 .btn,
@@ -13613,8 +13608,8 @@ input.form-control:focus {
 }
 .btn-primary {
   color: white;
-  background-color: #EF4035;
-  border-color: #EF4035;
+  background-color: #33ddac;
+  border-color: #33ddac;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
@@ -13652,11 +13647,11 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #EF4035;
-  border-color: #EF4035;
+  background-color: #33ddac;
+  border-color: #33ddac;
 }
 .btn-primary .badge {
-  color: #EF4035;
+  color: #33ddac;
   background-color: white;
 }
 body {
@@ -13665,7 +13660,7 @@ body {
   font-weight: 300;
 }
 a {
-  color: #EF4035;
+  color: #33ddac;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
@@ -13680,7 +13675,7 @@ p {
   line-height: 1.5;
 }
 p.lead {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial,
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial,
 sans-serif;
   font-weight: 900;
   text-transform: uppercase;
@@ -13692,7 +13687,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial,
+  font-family: "", "Helvetica Neue", Helvetica, Arial,
 sans-serif;
   font-weight: 900;
   text-transform: uppercase;
@@ -13719,7 +13714,7 @@ hr.right {
   margin: 15px 0 15px auto;
 }
 hr.colored {
-  border-color: #EF4035;
+  border-color: #33ddac;
 }
 @media (min-width: 768px) {
   hr {
@@ -13734,7 +13729,7 @@ hr.colored {
   }
 }
 .text-primary {
-  color: #EF4035;
+  color: #33ddac;
 }
 .navbar-fixed-top {
   margin-bottom: 0;
@@ -13745,12 +13740,12 @@ hr.colored {
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
-  color: #EF4035;
+  color: #33ddac;
   background-color: white;
   border-radius: 0;
 }
 .navbar-default {
-  background-color: #EF4035;
+  background-color: #33ddac;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
@@ -14063,7 +14058,7 @@ sans-serif;
   margin: auto 0 !important;
   top: 0;
   bottom: 0;
-  background-color: #EF4035 !important;
+  background-color: #33ddac !important;
   color: white !important;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -14133,7 +14128,7 @@ sans-serif;
   margin: auto 0 !important;
   top: 0;
   bottom: 0;
-  background-color: #EF4035 !important;
+  background-color: #33ddac !important;
   color: white !important;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -14221,7 +14216,7 @@ sans-serif;
   margin: auto 0 !important;
   top: 0;
   bottom: 0;
-  background-color: #EF4035 !important;
+  background-color: #33ddac !important;
   color: white !important;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -14350,7 +14345,7 @@ sans-serif;
   margin: auto 0 !important;
   top: -30px;
   bottom: 0;
-  background-color: #EF4035 !important;
+  background-color: #33ddac !important;
   color: white !important;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -14394,9 +14389,9 @@ sans-serif;
   transition: all 0.5s;
 }
 .portfolio-filter #filters li .filter.active {
-  background-color: #EF4035;
+  background-color: #33ddac;
   color: white;
-  border-color: #EF4035;
+  border-color: #33ddac;
 }
 #portfoliolist .mix {
   width: 31%;
@@ -14434,7 +14429,7 @@ sans-serif;
   transition: all 0.5s;
 }
 #portfoliolist .mix .portfolio-wrapper .caption .caption-bg {
-  background: #EF4035;
+  background: #33ddac;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -14511,7 +14506,7 @@ a.text-title {
   opacity: 1;
 }
 .floating-label-form-group-with-focus label {
-  color: #EF4035;
+  color: #33ddac;
 }
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #e1e1e1;
@@ -14558,7 +14553,7 @@ footer.footer .copyright p.small {
 }
 .btn-outline-light:hover,
 .btn-outline-light:focus {
-  color: #EF4035;
+  color: #33ddac;
   background: white;
   outline: none;
 }
@@ -14573,8 +14568,8 @@ footer.footer .copyright p.small {
 .btn-outline-dark:hover,
 .btn-outline-dark:focus {
   color: white;
-  background: #EF4035;
-  border-color: #EF4035;
+  background: #33ddac;
+  border-color: #33ddac;
   outline: none;
 }
 .btn {
@@ -14601,7 +14596,7 @@ footer.footer .copyright p.small {
   text-transform: none;
 }
 .btn-full-width:hover {
-  background-color: #EF4035;
+  background-color: #33ddac;
   color: white;
 }
 .btn-full-width:focus {

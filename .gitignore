@@ -1,2 +1,34 @@
 node_modules
 bower_components
+
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.jar
+*.zip
+*.tar
+*.rar
+*.iso
+
+# Logs * DB
+#---------
+*.log
+*.sql
+*.sqlite
+
+#DS Generated Files 
+#_-----------------
+.DS_Store
+.DS_Store7
+._*
+.Spotlight-v100
+.Trashes
+ehthumbs.db
+*.sass-cache*
+*.icloud
+
+#img folder
+img
+
