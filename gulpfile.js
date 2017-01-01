@@ -3,10 +3,10 @@ var gulp       = require('gulp'),
     livereload = require('gulp-livereload'),
     header     = require('gulp-header'),
     concat     = require('gulp-concat'),
-    htmlV      = require('gulp-html-validator'),
+   // htmlV      = require('gulp-html-validator'),
     md         = require('gulp-html2md'),
-    imagemin   = require('gulp-imagemin'),
-    jsV        = require('gulp-jsvalidate'),
+   // imagemin   = require('gulp-imagemin'),
+   // jsV        = require('gulp-jsvalidate'),
     mCSS       = require('gulp-minify-css'),
     notify     = require('gulp-notify'),
     uglify     = require('gulp-uglify'),
@@ -14,6 +14,7 @@ var gulp       = require('gulp'),
     compass    = require('gulp-compass'),
     clean      = require('gulp-cleanhtml'),
     mario      = require('gulp-plumber');
+    uncss      = require('gulp-uncss');
 
 
 // -----------------------------------------------------------------
@@ -57,7 +58,7 @@ gulp.task('js', function() {
                                        "build.js"
                                        ]))
     .pipe(concat("the_feel.js"))
-    .pipe(jsV())
+   // .pipe(jsV())
     .pipe(uglify())
     .pipe(gulp.dest("dist/js"))
     .pipe(notify("gulp: js complete :) ."));
@@ -68,12 +69,22 @@ gulp.task("css", function() {
 });
 
 gulp.task("html", function() {
-  gulp.src('index.html')
+/*  gulp.src('index.html')
       .pipe(htmlV())
       .pipe(gulp.dest('dist'));
-
+*/
 });
 
+
+
+gulp.task("uncss", function() {
+  return gulp.src('dist/css/the_look.css')
+          .pipe(uncss({
+            html: ['index.html']
+
+            }))
+          .pipe(gulp.dest('./out'));
+  });
 //-------------------------------------------------------------------------------------------------------------
 
 gulp.task('default', function() {
